@@ -1,0 +1,67 @@
+-- Instances:
+
+local XenomorphLoaded = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local XenoLabel = Instance.new("TextLabel")
+local LoadedLabel = Instance.new("TextLabel")
+textsizeint = 0;
+--Properties:
+
+XenomorphLoaded.Name = "XenomorphLoaded"
+XenomorphLoaded.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+XenomorphLoaded.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = XenomorphLoaded
+Frame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+Frame.Position = UDim2.new(0.409629047, 0, 0.443236709, 0)
+Frame.Size = UDim2.new(0, 0 , 0, 0)
+
+XenoLabel.Name = "XenoLabel"
+XenoLabel.Parent = Frame
+XenoLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+XenoLabel.BackgroundTransparency = 100.000
+XenoLabel.Position = UDim2.new(0.0626001656, 0, -0.00382211804, 0)
+XenoLabel.Size = UDim2.new(0, 0, 0, 0)
+XenoLabel.Font = Enum.Font.SourceSansBold
+XenoLabel.Text = "Xenomorph"
+XenoLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+XenoLabel.TextSize = 0
+XenoLabel.Visible = false
+
+LoadedLabel.Name = "LoadedLabel"
+LoadedLabel.Parent = Frame
+LoadedLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+LoadedLabel.BackgroundTransparency = 100.000
+LoadedLabel.Position = UDim2.new(0.180769488, 0, 0.597740829, 0)
+LoadedLabel.Size = UDim2.new(0, 0, 0, 0)
+LoadedLabel.Font = Enum.Font.SourceSans
+LoadedLabel.Text = "Loaded"
+LoadedLabel.TextColor3 = Color3.fromRGB(255, 112, 29)
+LoadedLabel.TextSize = 0
+LoadedLabel.Visible = false
+wait(2)
+Frame:TweenSize(UDim2.new(0, 229, 0, 85))
+LoadedLabel:TweenSize(UDim2.new(0, 145, 0, 34))
+XenoLabel:TweenSize(UDim2.new(0, 200, 0, 50))
+XenoLabel.Visible = true
+LoadedLabel.Visible = true
+while(XenoLabel.TextSize < 50) do
+	textsizeint = textsizeint + 1
+	wait()
+	XenoLabel.TextSize = textsizeint
+	LoadedLabel.TextSize = textsizeint / 2
+end
+wait(1)
+Frame:TweenSize(UDim2.new(0, 0, 0, 0))
+LoadedLabel:TweenSize(UDim2.new(0, 0, 0, 0))
+XenoLabel:TweenSize(UDim2.new(0, 0, 0, 0))
+while(XenoLabel.TextSize > 1) do
+	textsizeint = textsizeint + -3
+	wait()
+	XenoLabel.TextSize = textsizeint
+	LoadedLabel.TextSize = textsizeint / 2
+end
+LoadedLabel.Visible = false
+XenoLabel.Visible = false
+wait(0.5)
+Frame.Visible = false
