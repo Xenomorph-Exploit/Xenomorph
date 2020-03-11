@@ -1,0 +1,9 @@
+xtm-start
+{
+	backround: 30;30;30-
+	backround-luabox: 25;25;25-
+	panel: 15;15;15-
+	button-bck: 25;25;25-
+	script-bck: 25;25;25-
+}
+xtm-end
